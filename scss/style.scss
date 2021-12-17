@@ -1,0 +1,242 @@
+// === Mixins ===
+@mixin navGradient {
+    background: linear-gradient(to right,#00CBCC,#35D9BF,#65E5AB,#95EE95,#C6F580,#F9F871);
+}
+// === / Mixins ===
+
+// === Variables ===
+$body-color: blue;
+$bg-color: white;
+$text-link-color: rgba(0,0,0,0.6);
+$text-color: black;
+$primary-color: #00CBCC;
+$margin-left-right: 50;
+$header-font-size: 21px;
+$text-font-size: 21px;
+$title-font-size: 42px;
+$title-project-font-size: 32px;
+$footer-font-size: 16px;
+$header-footer-height: 50px;
+// === / Variables ===
+
+// === Common ===
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: 'Montserrat', sans-serif;
+    font-size: $text-font-size;
+    
+}
+
+.section-inner {
+    display: grid;
+    max-width: 1200px;
+    justify-content: space-between;
+    margin: 0 auto;
+    grid-auto-flow: column;
+}
+
+.section-outer:not(:last-child) {
+    margin-bottom: 200px;
+}
+// === / Common ===
+
+// === Header ===
+
+.section-header {
+    font-size: $header-font-size;
+    position: sticky;
+    top: 0;
+    .section-inner {
+        height: $header-footer-height;
+        align-items: center;
+    }
+    @include navGradient();
+
+    &-logo {
+        color: $text-color;
+        &__predot {
+            display: inline;
+            font-weight: 400;
+            color: black;
+            font-size: 1.2em;
+        }
+        a {
+            text-decoration: none;
+            color: $text-link-color;
+        }
+     
+    }
+    
+    &-content {
+        a {
+            text-decoration: none;
+            margin-left: 75px;
+            opacity: 0.5;
+            color: $text-link-color;
+            transition: all 0.3s;
+        }
+        a.active {
+            text-decoration: underline blue;
+            text-decoration-thickness: 3px;
+        }
+
+        a:hover, a.active{
+            opacity: 1;
+            color: $text-color;
+        }
+    }
+}
+
+// === / Header ===
+
+// === About ===
+
+.section-about {
+
+    button {
+        img {
+            width: 15%;
+        }
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+        background-color: white;
+        border: $primary-color solid 2px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        color: white;
+        background-color: $primary-color;
+        transition: all 0.3s ease-in-out;
+    }
+
+    h1 {
+        font-size: $title-font-size;
+    }
+    &-text {
+        &__title {
+            margin: 20px 0;
+        }
+    }
+    &-img {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// === / About ===
+
+// === Skills ===
+.section-skills {
+    .section-inner {
+        grid-auto-flow: row;
+        justify-content: stretch;
+    }
+    
+    h1 {
+        justify-self: center;
+        margin-bottom: 60px;
+    }
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 300px;
+
+        img {
+           width: 100%;
+        }
+        p {
+            align-self: center;
+        }
+    }
+
+    &-item:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+// === / Skills ===
+
+// === Projects ===
+
+.section-projects {
+    .section-inner {
+       grid-auto-flow: row;
+       align-items: center;
+
+       h1 {
+            justify-self: center;
+            margin-bottom: 60px;
+        }
+    }
+    
+    &-container {
+        display: grid;
+        gap: 100px;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(2,1fr);
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: $primary-color solid 2px;
+        &__title {
+            font-size: $title-project-font-size;
+            cursor: pointer;
+        }
+        &__image {   
+            img {
+                height: 400px;
+                width: 100%;
+            }
+            cursor: pointer;
+        }
+        &__text {
+            border-top: $primary-color dashed 2px;
+            text-align: center;
+        }
+    }
+}
+
+// === / Projects ===
+
+// === Footer ===
+.section-footer {
+    background-color: #65E5AB;
+    font-size: $footer-font-size;
+    .section-inner{
+        height: $header-footer-height;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 36px;
+    }
+}
+// === / Footer ===
+

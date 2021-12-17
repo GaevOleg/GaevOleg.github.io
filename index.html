@@ -1,11 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Test page</title>
-  </head>
-  <body>
-      This is test github.io
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaev Oleg - FrontEnd developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <section class="section-outer section-header">
+        <div class="section-inner">
+            <div class="section-header-logo">
+                <a href="#"><div class="section-header-logo__predot">ogaev</div>.dev</a>
+            </div>
+            <div class="section-header-content">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+            </div>
+        </div>
+    </section>
+    <!-- /header -->
+
+    <!-- about -->
+    <section id="about" class="section-outer section-about">
+        <div class="section-inner">
+            <div class="section-about-text">
+                <div class="section-about-text__title"><h1>Welcome!</h1></div>
+                <div class="section-about-text__paragraph"><p>My name is <i><b>Gaev Oleg</b></i> and I'm FrontEnd developer.
+                    I'm learning JavaScript and tools and frameworks of this programming language.
+                </p></div>
+                <button onclick="window.open('https://github.com/razorkrome')">Check my projects on github</button>
+            </div>
+            <div class="section-about-img"><img src="./assets/about.jpg" alt="Картинка со стока"></div>
+        </div>
+    </section>
+    <!-- /about -->
+
+    <!-- skills -->
+    <section id="skills" class="section-outer section-skills">
+        <div class="section-inner">
+            <h1>Skills</h1>
+            <div class="section-skills-container">
+                <div class="section-skills-item">
+                    <p>JavaScript</p>
+                    <img src="./assets/skills/js.png" alt="">
+                </div>
+                <div class="section-skills-item">
+                    <p>HTML</p>
+                    <img src="./assets/skills/html5.png" alt="">  
+                </div>
+                <div class="section-skills-item">
+                    <p>CSS</p>
+                    <img src="./assets/skills/css3.png" alt="">
+                </div>
+                <div class="section-skills-item">
+                    <p>React.js</p>
+                    <img src="./assets/skills/react.png" alt="">
+                </div>
+                <div class="section-skills-item">
+                    <p>Node.js</p>
+                    <img src="./assets/skills/node-js.png" alt="">
+                </div> 
+            </div>
+        </div>
+    </section>
+    <!-- /skills -->
+
+    <!-- projects -->
+    <section id="projects" class="section-outer section-projects">
+        <div class="section-inner">
+            <h1>Projects</h1>
+            <div class="section-projects-container">
+                <div class="section-projects-item">
+                    <div class="section-projects-item__title" onclick="window.open('https://github.com/razorkrome/Calendar')">Post List</div>
+                    <div class="section-projects-item__image" onclick="window.open('https://github.com/razorkrome/Calendar')"><img src="./assets/projects/postlist.png" alt=""></div>
+                    <div class="section-projects-item__text">
+                        First project on React. Dynamically loaded post list with comments
+                    </div>
+                </div>
+                <div class="section-projects-item">
+                    <div class="section-projects-item__title" onclick="window.open('https://github.com/razorkrome/Calendar')">Calendar</div>
+                    <div class="section-projects-item__image" onclick="window.open('https://github.com/razorkrome/Calendar')"><img src="./assets/projects/calendar.png" alt=""></div>
+                    <div class="section-projects-item__text">
+                        Simple calendar. Track current day. You can switch month with arrow buttons
+                    </div>
+                </div>
+                <!-- <div class="section-projects-item">
+                    <div class="section-projects-item__title">Pomodoro-timer</div>
+                    <div class="section-projects-item__image"><img src="./assets/jpg/about.jpg" alt=""></div>
+                    <div class="section-projects-item__text">
+                        Pomodoro-timer на React-Native. Удобно использовать при работе или занятиях спортом
+                    </div>
+                </div>
+                <div class="section-projects-item">
+                    <div class="section-projects-item__title">Title4</div>
+                    <div class="section-projects-item__image"><img src="./assets/jpg/about.jpg" alt=""></div>
+                    <div class="section-projects-item__text">
+                        Здесь должно быть описание той программы, которую написал. Которую я пока что не придумал. Бла-бла-бла-бла
+                    </div>
+                </div>
+                <div class="section-projects-item">
+                    <div class="section-projects-item__title">Title5</div>
+                    <div class="section-projects-item__image"><img src="./assets/jpg/about.jpg" alt=""></div>
+                    <div class="section-projects-item__text">
+                        Здесь должно быть описание той программы, которую написал. Которую я пока что не придумал. Бла-бла-бла-бла
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- /projects -->
+
+     <!-- footer -->
+     <section class="section-outer section-footer">
+        <div class="section-inner">
+            <div class="section-footer__copyright">© 2021 Гаев Олег</div>
+        </div>
+    </section>
+    <!-- /footer -->
+</body>
 </html>
