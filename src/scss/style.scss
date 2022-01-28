@@ -1,0 +1,12 @@
+//Common styles
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+@import 'common/variables.scss';
+@import 'common/mixins.scss';
+@import 'common/common.scss';
+
+//Sections
+@import 'sections/header.scss';
+@import 'sections/about.scss';
+@import 'sections/skills.scss';
+@import 'sections/projects.scss';
+@import 'sections/footer.scss';

@@ -1,0 +1,16 @@
+.about {
+    .container{
+        flex-direction: column-reverse;
+        align-items: center;
+
+        @media (min-width: $md) {
+            flex-direction: row;
+        }
+    }
+    
+    &__text {
+        @media (max-width: $md) {
+            width: 90%;
+        }
+    }
+}

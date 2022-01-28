@@ -1,0 +1,72 @@
+.skills {
+    &__list {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+
+        @media (min-width: $md) {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+
+    &__item {
+        background-color: white;
+        padding: 10px;
+        transition: all 0.3s ease;
+        margin-bottom: 20px;
+        text-align: center;
+        cursor: default;
+
+        @media (max-width: $md) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+
+        @media (min-width: $md) {
+            margin-right: 30px;
+        }
+
+        &:hover {
+            color: white;
+
+            &.html {
+                background-color: $html;
+            }
+
+            &.css {
+                background-color: $css;
+            }
+
+            &.js {
+                background-color: $js;
+            }
+
+            &.node {
+                background-color: $node;
+            }
+
+            &.react {
+                background-color: $react;
+            }
+
+            &.yarn {
+                background-color: $yarn;
+            }
+
+            &.npm {
+                background-color: $npm;
+            }
+
+            &.webpack {
+                background-color: $webpack;
+            }
+
+            @media (min-width: $md) {
+                transform: translate(0, -10px);
+            }
+        }
+
+    }
+}

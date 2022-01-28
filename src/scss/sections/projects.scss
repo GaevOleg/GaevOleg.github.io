@@ -1,0 +1,74 @@
+.projects {
+    &__body{
+        display: grid;
+        margin-bottom: 100px;
+        justify-items: stretch;
+        @media (min-width: $lg) {
+            grid-template-columns: 1fr 1fr;
+        }   
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+        box-shadow: -1px 1px 15px 0 black, 1px -1px 15px 0 black;
+       
+
+        @media (max-width: $lg) {
+            margin-bottom: 50px;
+        }
+
+        &__desc {
+            border-top: 1px solid black;
+            width: 100%;
+            padding: 20px 20px;
+            text-align: justify;
+        }
+
+        &__img {
+            cursor: pointer;
+        }
+
+        &__img img{
+            height: 400px;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px dashed black;
+            cursor: pointer;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            font-size: 1rem;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid $primary;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background-color: $primary;
+            }
+
+            @media (max-width: $md) {
+                width: 100%;
+            }
+        }
+    }
+}
