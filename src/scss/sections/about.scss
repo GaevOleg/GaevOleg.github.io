@@ -13,4 +13,10 @@
             width: 90%;
         }
     }
+
+    &__image img{
+        @media (max-width: $md) {
+            width: 100%;
+        }
+    }
 }

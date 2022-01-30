@@ -10,8 +10,6 @@
     z-index: 10;
     background-color: $primary;
 
-    
-
     &__brand {
         font-size: 1.2rem;
         cursor: default;
@@ -29,6 +27,7 @@
     &__container {
         @media (max-width: $md) {
             width: 100%;
+            flex-direction: row-reverse;
         }
 
         display: flex;
