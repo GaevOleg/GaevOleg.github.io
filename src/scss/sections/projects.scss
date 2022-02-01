@@ -14,9 +14,8 @@
         flex-direction: column;
         max-width: 400px;
         margin: 0 auto;
-        box-shadow: -1px 1px 15px 0 black, 1px -1px 15px 0 black;
+        box-shadow: 0px 2px 1px -1px #cccccc, 0px 1px 1px 0px #dbdbdb, 0px 1px 3px 0px #e0e0e0;
        
-
         @media (max-width: $lg) {
             margin-bottom: 50px;
         }
@@ -43,7 +42,6 @@
             width: 100%;
             text-align: center;
             padding: 30px 0;
-            border-bottom: 1px dashed black;
             cursor: pointer;
         }
     }
